@@ -1,0 +1,100 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+  // This code violates the rule about not using global variables.
+  int global_variable = 10;
+
+  // This code violates the rule about not using magic numbers.
+  int magic_number = 42;
+
+  // This code violates the rule about not using casts.
+  int casted_value = (int) 1.2;
+
+  // This code violates the rule about not using signed and unsigned types together.
+  int signed_value = 10;
+  unsigned_int unsigned_value = 20;
+
+  // This code violates the rule about not using pointers.
+  int* pointer_to_int = new int;
+
+  // This code violates the rule about not using exceptions.
+  try {
+    throw "Exception";
+  } catch (const char* exception_message) {
+    cout << exception_message << endl;
+  }
+
+  // This code violates the rule about not using functions with side effects.
+  void function_with_side_effect() {
+    cout << "This function has a side effect." << endl;
+  }
+
+  // This code violates the rule about not using functions with global state.
+  void function_with_global_state() {
+    global_variable = 20;
+  }
+
+  // This code violates the rule about not using functions with undefined behavior.
+  void function_with_undefined_behavior() {
+    int* pointer_to_null = nullptr;
+    *pointer_to_null = 10;
+  }
+
+  // This code violates the rule about not defining a C-style variadic function.
+  void variadic_function(int, ...);
+
+  // This code violates the rule about not using a C-style cast.
+  int casted_value2 = (int) 1.2;
+
+  // This code violates the rule about not using a C-style for loop.
+  for (int i = 0; i < 10; i++) {
+    cout << i << endl;
+  }
+
+  // This code violates the rule about not using a C-style goto statement.
+  goto label;
+  label:
+    cout << "This code is unreachable." << endl;
+
+  // This code violates the rule about not using a C-style switch statement.
+  switch (1) {
+    case 1:
+      cout << "This code is unreachable." << endl;
+      break;
+  }
+
+  // This code violates the rule about not using a C-style struct.
+  struct struct_name {
+    int member_1;
+    int member_2;
+  };
+
+  // This code violates the rule about not using a C-style union.
+  union union_name {
+    int member_1;
+    int member_2;
+  };
+
+  // This code violates the rule about not using a C-style typedef.
+  typedef int typedef_name;
+
+  // This code violates the rule about not using a C-style enum.
+  enum enum_name {
+    value_1,
+    value_2
+  };
+
+  // This code violates the rule about not using a C-style function pointer.
+  int (*function_pointer)(int, int);
+
+  // This code violates the rule about not using a C-style array.
+  int array[10];
+
+  // This code violates the rule about not using a C-style string.
+  char* string = "This is a string";
+
+  return 0;
+}
